@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  whisper-offline:
+    build: ./whisper-offline
+    ports:
+      - "5000:5000"
+
+  vosk-online:
+    image: alphacep/kaldi-en:latest
+    ports:
+      - "2700:2700"
